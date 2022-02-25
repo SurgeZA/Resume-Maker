@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family:'Bahnschrift Condensed';
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+
+
+}
+.collapsible {
+    background-color: rgb(166, 188, 255);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+
+.active, .collapsible:hover {
+    background-color: rgb(51, 133, 255);
+    }
+
+.content {
+    padding: 0 18px;
+    padding-left: 2.5%;
+    padding-right: 15%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #f1f1f1;
+    }
+
+.content p {
+        font-size: 17px;
+    }
+
+
+.collapsible a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#logo{
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+#logo img{
+    width: 100px;
+}
+
+#menu{
+    position: fixed;
+    font-family: 'Bahnschrift Condensed';
+    font-size: 30px;
+    background: rgb(255, 255, 255);
+    color: rgb(23, 143, 255);
+    letter-spacing: 2px;
+    margin-right: 70px;
+    top: 0px;
+    float: right;
+    text-decoration: none;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 20px;
+    padding-bottom: 100%;
+}
+
+#menu a {
+    color: black;
+    text-decoration: none;
+}
+
+#menu ul{
+    list-style: none;
+    
+    text-decoration: none;
+}
+
+#menu ul li{
+    display: inline-block;
+    margin-left: 40px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#menu ul li:hover{
+  color: dodgerblue;
+}
+
+#recruits{
+    margin-left: 300px;
+}
+
+#recruits h2{
+    font-size: 30px;
+}
+
+h1{
+    font-size: 45px;
+    color: dodgerblue;
+}

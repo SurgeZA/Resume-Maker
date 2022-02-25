@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Donations</title>
+        <style>
+            .header {
+                background: rgb(255, 255, 255);
+                color: #f1f1f1;
+            }
+
+            .content {
+                padding: 16px;
+            }
+
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            /* 
+            .sticky + .content {
+            padding-top: 102px;
+            } */
+
+            #logo{
+                float: left;
+                margin-left: 30px;
+                margin-top: 0px;
+                top: 0;
+                position: absolute;
+            }
+
+            #logo img{
+                width: 100px;
+            }
+
+            #menu{
+                font-family: 'Bahnschrift Condensed';
+                font-size: 30px;
+                background: rgb(255, 255, 255);
+                color: rgb(23, 143, 255);
+                letter-spacing: 2px;
+                margin-right: 70px;
+                margin-top: 0px;
+                float: right;
+                text-decoration: none;
+                padding-top: 10px;
+                padding-right: 80px;
+                padding-left: 20%;
+            }
+
+            #menu a {
+                color: black;
+                text-decoration: none;
+            }
+
+            #menu ul{
+                list-style: none;
+                
+                text-decoration: none;
+            }
+
+            #menu ul li{
+                display: inline-block;
+                margin-left: 40px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            #menu ul li:hover{
+              color: dodgerblue;
+            }
+
+            body{
+                background-image: url(don.jpeg);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            #donation-info{
+                text-align: center;
+                font-family: 'Bahnschrift Condensed';
+                margin-top: 8%;
+                padding-left: 15%;
+                padding-right: 15%;
+            }
+
+            #donation-words #text{
+                background-color: rgb(255, 255, 255, 0.8);
+            }
+
+            #donation-words h1{
+                font-size: 45px;
+                letter-spacing: 0.1em;
+            }
+
+            #donation-words p{
+                font-size: 25px;
+            }
+
+            #donate-button{
+                margin-top: 30px;
+                text-align: center;
+            }
+
+
+  
+        </style>
+    </head>
+    <body>
+
+        <div class="header" id="myHeader">
+            <div id="container">
+               <div id="logo">
+                   <img src="6.png"/>
+               </div>
+           <div id="menu">
+               <ul>
+                   <a href="home.html"><li>HOME</li></a>
+                   <a href="home.html #spacing"><li>ABOUT</li></a>
+                   <a href="home.html #myBtn"><li>CONTACT</li></a>
+                   <li>SERVICES</li>
+                   <a href="links.html"><li>RESOURCES</li></a>
+                   <a href="donation.html" style="color: dodgerblue;"><li>DONATIONS</li></a>
+               </ul>
+        </div>             
+        </div>
+       </div>
+   </div>
+       
+               
+<script>
+   window.onscroll = function() {myFunction()};
+   
+   var header = document.getElementById("myHeader");
+   var sticky = header.offsetTop;
+   
+   function myFunction() {
+     if (window.pageYOffset > sticky) {
+       header.classList.add("sticky");
+     } else {
+       header.classList.remove("sticky");
+     }
+   }
+   </script>
+
+        </div>
+<br>
+
+        <div id="donation-info">
+            <div id="donation-words">
+            <br><br>
+            <div id="text">
+                <br>
+                <h1>Would you like to donate?</h1>
+                <p>If you value our organisation's goals and would like to support us with funding<br> go right ahead and hit the donate button!<br><br>Thank you for  your kind support!</p>
+                
+            
+                <div id="donate-button-container">
+                    <div id="donate-button"></div>
+                        <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                        <script>
+                        PayPal.Donation.Button({
+                        env:'production',
+                        hosted_button_id:'PS38XVDXQUBSG',
+                        image: {
+                        src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                        alt:'Donate with PayPal button',
+                        title:'PayPal - The safer, easier way to pay online!',
+                        }
+                        }).render('#donate-button');
+                        </script>
+                        <br><br>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </body>
+</html>
+
+
+
+

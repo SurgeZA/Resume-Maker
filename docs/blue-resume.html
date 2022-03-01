@@ -14,6 +14,11 @@
 
     <title>CV Generator</title>
     <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 14px;
+        }
+
         .resume {
             width: 6.1in;
             height: 7.86in;
@@ -44,22 +49,25 @@
         }
 
         .profile-image {
-            width: 90%;
-            margin-left: 5%;
-            margin-top: 3%;
+            width: 80%;
+            margin-left: 4%;
+            margin-top: 10%;
         }
 
         .profile-image img {
             border-radius: 50%;
+
         }
 
         .heading-text {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-family: 'Bahnschrift Condensed';
+
         }
 
         .para,
         .per-info {
-            font-size: 0.7rem !important;
+            font-size: 01rem !important;
         }
 
         .about .para {
@@ -67,7 +75,7 @@
         }
 
         .key-skills li {
-            font-size: 0.7rem;
+            font-size: 1rem;
         }
     </style>
 
@@ -80,8 +88,8 @@
             <div class="left-side d-inline-block">
                 <div class="profile-image">
                     <img class="img-fluid"
-                        src="https://m.media-amazon.com/images/M/MV5BMzhhNTJhYmEtMjk5Yy00OTc0LTlmMTgtZTU5YTFiMmNjMTFiXkEyXkFqcGdeQXVyNjMwOTA1MDM@._V1_.jpg"
-                        alt="Profile picture">
+                        src="data:image/jpeg;base64,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"
+                        alt="">
                 </div>
                 <div class="contact ml-2 mt-2">
                     <div class="heading-text text-uppercase">Contact</div>
@@ -141,20 +149,20 @@
                     <table class="per-info">
                         <tbody>
                             <tr class="border">
-                                <td>Father's Name</td>
-                                <td>Rayaan</td>
+                                <td>LinkedIn:</td>
+                                <td>www.linkedIn.org</td>
                             </tr>
                             <tr class="border">
-                                <td>Mather's Name</td>
-                                <td>Shane</td>
+                                <td>Gender:</td>
+                                <td>Male</td>
                             </tr>
                             <tr class="border">
-                                <td>Date of Birth</td>
-                                <td>12 feb 2022</td>
+                                <td>Date of Birth:</td>
+                                <td>17 May 2001</td>
                             </tr>
                             <tr class="border">
-                                <td>Permanent Address</td>
-                                <td>Cape Town</td>
+                                <td>Province: </td>
+                                <td>Western Cape</td>
                             </tr>
                         </tbody>
 
@@ -162,31 +170,31 @@
                 </div>
                 <div class="education ml-3 mt-3">
                     <div class="heading-text text-uppercase">Educational informations</div>
-                    <table class="per-info">
+                    <table class="per-info" border-colour: black;>
                         <tbody>
                             <tr class="border">
                                 <td>2020-2022</td>
                                 <td>
-                                    sdaaaaaaaaaaa <br>
-                                    Casddddddddd <br>
-                                    asdddddddddd <br>
-                                    sdaaaaaaaaaaaaaaaaaaaaaa
+                                    Younglings Africa <br>
+                                    Full-stack Developer <br>
+                                    I was responsible for Upskilling <br>
+                                    and working with pears
                                 </td>
                             </tr>
                             <tr class="border">
                                 <td>2022-2022</td>
                                 <td>
-                                    agfd <br>
-                                    dsfffffffffffffff <br>
-                                    dsfffffffffffffffffff <br>
-                                    dsfffffffffffffffffffffffffffff
+                                    Capaciti <br>
+                                    Software Developer <br>
+                                    I was responsible for the develpoment <br>
+                                    of a button
                                 </td>
                             </tr>
                             <tr class="border">
                                 <td>2020-2022</td>
                                 <td>
-                                    asd <br>
-                                    sadddddddddddd <br>
+                                    Capaciti <br>
+                                    Digital Associate <br>
                                 </td>
                             </tr>
                         </tbody>
@@ -220,14 +228,10 @@
         crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
-
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
 </body>
 
 </html>

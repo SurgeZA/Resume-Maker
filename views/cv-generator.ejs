@@ -1,5 +1,6 @@
 <div class="container">
-    <h4 class="text-primary">You are using <%= theme %> theme</h4>
+    <h4 class="text-primary">
+    </h4>
     <form action="/cv-generator" class="text-primary form" method="POST">
         <div class="form-row">
 
@@ -23,14 +24,18 @@
                 <label for="">E-mail</label>
                 <input type="text" name="email" class="form-control">
             </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Link to personal website</label>
+                <input type="text" name="website" class="form-control">
+            </div>
         </div>
         <div class="form-row">
             <div class="col-md-4 mb-3">
-                <label for="">Father's name</label>
+                <label for="">Link to your LinkedIn</label>
                 <input type="text" name="f_name" class="form-control">
             </div>
             <div class="col-md-4 mb-3">
-                <label for="">Mother's Name</label>
+                <label for="">Gender</label>
                 <input type="text" name="m_name" class="form-control">
             </div>
             <div class="col-md-4 mb-3">
@@ -105,6 +110,10 @@
                 <label for="">Exp. 3</label>
                 <input type="text" name="exp_3" class="form-control">
             </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Exp. 4</label>
+                <input type="text" name="exp_4" class="form-control">
+            </div>
         </div>
 
         <div class="form-group">
@@ -112,6 +121,51 @@
             <input type="text" placeholder="this whould be a comma seperated list" name="skill" class="form-control">
         </div>
 
+        <!-- Hobbies -->
+
+        <h4>Hobbies</h4>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="">Hobby 1</label>
+                <input type="text" name="hob_1" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Hobby 2</label>
+                <input type="text" name="hob_2" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Hobby 3</label>
+                <input type="text" name="hob_3" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Hobby 4</label>
+                <input type="text" name="hob_4" class="form-control">
+            </div>
+        </div>
+
+        <h4>Education Or Certifications</h4>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="">Education 1</label>
+                <input type="text" name="ed_1" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Education 2</label>
+                <input type="text" name="ed_2" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Education 3</label>
+                <input type="text" name="ed_3" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Education 4</label>
+                <input type="text" name="ed_4" class="form-control">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="">Education 5</label>
+                <input type="text" name="ed_5" class="form-control">
+            </div>
+        </div>
         <div class="form-group">
             <select name="theme" id="" hidden>
                 <option value="<%= theme %>">

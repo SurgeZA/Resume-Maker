@@ -16,6 +16,11 @@ const dynamicCV = (options, themeOptions) => {
 
     <title>CV Generator</title>
     <style>
+    *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 14px;
+    }
+
     .resume {
         width: 6.1in;
         height: 7.86in;
@@ -42,42 +47,39 @@ const dynamicCV = (options, themeOptions) => {
     }
     
     .name {
-        font-size: 1.2rem;
+        font-size: 1.9rem;
+        font-weight:bold;
     }
     
     .profile-image {
-        width: 90%;
-        margin-left: 5%;
-        margin-top: 3%;
+        width: 86%;
+        margin-left: 6%;
+        margin-top: 10%;
     }
     
     .profile-image img {
-        border-radius: 50%;
+            box-shadow: 5px 5px red;
     }
 
-    #dispaly_image{
-        width: 375px;
-        height: 211px;
-        border: 1px solid black;
-        backgroud-position: center;
-        background-size: cover;
 
-    }
     
     .heading-text {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-family: 'Bahnschrift Condensed';
+
     }
-    
+
     .para,
     .per-info {
-        font-size: 0.7rem !important;
+        font-size: 01rem !important;
     }
-    
-    .about .para{
+
+    .about .para {
         width: 93%;
     }
-    .key-skills li{
-        font-size: 0.7rem;
+
+    .key-skills li {
+        font-size: 1rem;
     }
 
     </style>
@@ -88,11 +90,11 @@ const dynamicCV = (options, themeOptions) => {
     <div class="resume border shadow d-flex aligh-items-center jusify-content-center">
         <div class="box">
             <div class="left-side d-inline-block">
-            <input type="file" id="image_input" accept="image/png, image/jpg">
+
                 <div class="profile-image" id="display_image">
 
                     <img class="img-fluid"
-                        src="https://m.media-amazon.com/images/M/MV5BMzhhNTJhYmEtMjk5Yy00OTc0LTlmMTgtZTU5YTFiMmNjMTFiXkEyXkFqcGdeQXVyNjMwOTA1MDM@._V1_.jpg"
+                        src="https://cdn.goodgallery.com/e6aefb82-5598-40a4-9714-a3fe7474a7b0/t/0600/2p1cfl8c/johannesburg-portrait-personal-branding.jpg"
                         alt="Profile picture">
                 </div>
                 <div class="contact ml-2 mt-2">
@@ -145,19 +147,19 @@ const dynamicCV = (options, themeOptions) => {
             <table class="per-info">
                 <tbody>
                     <tr class="border">
-                        <td>Father's Name</td>
+                        <td>LinkedIn :</td>
                         <td>${options.f_name}</td>
                     </tr>
                     <tr class="border">
-                        <td>Mather's Name</td>
+                        <td>Gender :</td>
                         <td>${options.m_name}</td>
                     </tr>
                     <tr class="border">
-                        <td>Date of Birth</td>
+                        <td>Date of Birth :</td>
                         <td>${options.birth}</td>
                     </tr>
                     <tr class="border">
-                        <td>Location: </td>
+                        <td>Province: </td>
                         <td>${options.location}</td>
                     </tr>
                 </tbody>
@@ -192,14 +194,14 @@ const dynamicCV = (options, themeOptions) => {
             </table>
         </div>
         <div class="key-skills ml-3 mt-3">
-            <div class="heading-text text-uppercase">Key Skills</div>
+            <div class="heading-text text-uppercase">Education/Certification</div>
             <ul class="pl-1">
-                <li>${options.skills_1}</li>
-                <li>${options.skills_2}</li>
-                <li>${options.skills_3}</li>
-                <li>${options.skills_4}</li>
-                <li>${options.skills_5}</li>
-                <li>${options.skills_6}</li>
+                <li>${options.ed_1}</li>
+                <li>${options.ed_2}</li>
+                <li>${options.ed_3}</li>
+                <li>${options.ed_4}</li>
+                <li>${options.ed_5}</li>
+                
             </ul>
         </div>
     </div>

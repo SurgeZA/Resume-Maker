@@ -15,7 +15,7 @@ const dynamicCV = require("./docs/dynamic-resume");;
 //         document.querySelector('#display_image').getElementsByClassName.style.backgroundImage = `url(${uploaded_image})`;
 //     });
 //     reader.readAsDataURL(this.files[0]);
-// })
+// })           
 
 
 
@@ -24,6 +24,7 @@ const app = express();
 
 // Middleware
 app.set('view engine', 'ejs');
+// app.set('view engine', 'html');
 app.use(expressLayouts);
 app.use(express.static('public'));
 app.use(express.json());
@@ -32,12 +33,30 @@ app.use(express.urlencoded({ extended: false }));
 
 const options = {
     "height": "7.87in",
-    "width": "6.1in",
+    "width": "6.in",
 };
+
+// home page
+// router.get('/', forwardAuthenticated, (req, res) => res.render('index.html'));
+// app.get('/home', function (req, res, next) {
+//     res.render('home');
+// });
 
 app.get('/', (req, res, next) => {
     res.render('home');
 });
+
+app.get('/home.ejs', (req, res, next) => {
+    res.sendFile('/views/home.ejs');
+});
+
+// router.get('/home.ejs', function (req, res) {
+//     res.sendFile(path.join(__dirname + '/home.html'));
+// });
+
+// app.get('./views/home.ejs', function (req, res, next) {
+//     res.sendFile('C:/Users/Scott Dennis/Desktop/CV Generator/views/home.ejs');
+// });
 
 
 
@@ -72,6 +91,7 @@ app.post('/cv-generator', (req, res, next) => {
         leftBackgroundColour: 'rgb(12, 36, 58)',
         wholeBodyColour: ' rgb(183, 182, 255)',
         rightTextColour: 'rgb(12, 36, 58)'
+
     };
 
     if (req.body.theme === 'blue') {
@@ -85,10 +105,11 @@ app.post('/cv-generator', (req, res, next) => {
         });
     } else if (req.body.theme === 'green') {
         themeOptions = {
-            leftTextColour: "rgb(183, 217, 255)",
-            leftBackgroundColour: 'rgb(0, 119, 89)',
-            wholeBodyColour: ' rgb(139, 247, 205)',
-            rightTextColour: 'rgb(0, 119, 89)'
+            imgBoxShadow: "5px 5px #0000005d",
+            leftTextColour: "rgba(27, 27, 27)",
+            leftBackgroundColour: 'rgb(255, 163, 26)',
+            wholeBodyColour: ' rgb(41, 41, 41)',
+            rightTextColour: 'rgb(139, 139, 139)'
         };
 
         // HTML TO PDF CONVERTING
@@ -110,5 +131,5 @@ app.post('/cv-generator', (req, res, next) => {
 
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => console.log('Server is running on: ' + port));

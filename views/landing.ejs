@@ -1,0 +1,1040 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0px;
+        background: #ffffff;
+    }
+
+    #first {
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 150px;
+    }
+
+    #first #menu ul li a {
+        text-decoration: none;
+    }
+
+    .header {
+        background: rgb(255, 255, 255);
+        color: #f1f1f1;
+    }
+
+    .content {
+        padding: 16px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    #logo {
+        float: left;
+        margin-left: 30px;
+        margin-top: 0px;
+        position: absolute;
+    }
+
+    #logo img {
+        width: 100px;
+    }
+
+    #menu {
+        font-family: 'Bahnschrift Condensed';
+        font-size: 30px;
+        background: rgb(255, 255, 255);
+        color: rgb(23, 143, 255);
+        letter-spacing: 2px;
+        margin-right: -10px;
+        margin-top: 0px;
+        float: right;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-right: 80px;
+        padding-left: 20%;
+    }
+
+    #menu a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #menu ul {
+        list-style: none;
+
+        text-decoration: none;
+    }
+
+    #menu ul li {
+        display: inline-block;
+        margin-left: 40px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    #menu ul li:hover {
+        color: dodgerblue;
+    }
+
+    #main {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    #box1 {
+        width: 530px;
+        height: 625px;
+        background-image: url('img/7.png');
+        background-repeat: no-repeat;
+        position: relative;
+        bottom: -100%;
+        left: 30px;
+        animation: anim 2s forwards, anim2 3s forwards 3s;
+        margin-top: 80px;
+        margin-bottom: 10px;
+    }
+
+    #box1::after {
+        content: '';
+        position: absolute;
+        width: 530px;
+        height: 625px;
+        background-image: url('img/6.png');
+        background-repeat: no-repeat;
+        left: 0px;
+        z-index: -1;
+
+    }
+
+    @keyframes anim {
+        from {
+            bottom: -100%;
+        }
+
+        to {
+            bottom: 0%;
+        }
+    }
+
+    @keyframes anim2 {
+        from {
+            left: 30%;
+            width: 530px;
+        }
+
+        to {
+            width: 0px;
+            left: 50%;
+        }
+    }
+
+    #box2 {
+        width: auto;
+        height: auto;
+        font-family: 'Bahnschrift Condensed';
+        color: rgb(0, 0, 0);
+        font-size: 10em;
+        font-weight: 500;
+        line-height: 130px;
+        position: absolute;
+        top: 250px;
+        left: 100px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    #box2 a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #text {
+        position: relative;
+        left: -100%;
+        animation: anim3 2s forwards 3s;
+    }
+
+    @keyframes anim3 {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 0%;
+        }
+    }
+
+    #box3 {
+        overflow: hidden;
+    }
+
+    #container {
+        width: 100%;
+        position: absolute;
+        top: -100%;
+        animation: anim4 2s forwards 2.5s;
+    }
+
+
+
+    @keyframes anim4 {
+        from {
+            top: -100%;
+        }
+
+        to {
+            top: auto;
+        }
+    }
+
+    #spacing {
+        margin-top: 45%;
+        /* background-color: rgba(231, 231, 231, 0.575); */
+        padding-top: 50px;
+        padding-left: 250px;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 400px;
+        margin-left: 0px;
+    }
+
+    .column h1 {
+        font-size: 70px;
+        font-family: 'Bahnschrift Condensed';
+        color: rgb(73, 182, 255);
+        font-weight: 1000;
+        letter-spacing: 0.3em;
+        line-height: 1;
+        margin-bottom: 0.7rem;
+        text-align: left;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #column1 {
+        overflow: visible;
+        width: 40%;
+        margin-top: 100px;
+        margin-left: -100px;
+        margin-right: 100px;
+    }
+
+    #column2 {
+        width: 50%;
+        height: auto;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 6px;
+        border-color: rgb(64, 169, 211);
+        box-shadow: 5px 10px 8px 10px #9bdaff65;
+    }
+
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+    }
+
+    #myBtn {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+        border-color: dodgerblue;
+        border-radius: 20px;
+        border-width: 5px;
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 250px;
+        height: 50px;
+
+    }
+
+    #myBtn:hover {
+        color: rgb(101, 129, 255);
+        font-weight: bold;
+    }
+
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .modal-content label {
+        font-size: 20px;
+        color: dodgerblue;
+        font-family: 'Bahnschrift Condensed';
+    }
+
+    form input {
+        width: 60%;
+        font-family: 'Bahnschrift Condensed';
+        height: 40px;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    form textarea {
+        height: 70px;
+    }
+
+    input,
+    textarea {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 17px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    }
+
+    textarea {
+        resize: none;
+        padding-top: 10px;
+    }
+
+    .footer {
+        margin-top: 150px;
+        margin-left: -250;
+        margin-bottom: -80px;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: transparent;
+        color: white;
+
+    }
+
+    .animated-text {
+        position: relative;
+        height: 70px;
+        overflow: hidden;
+
+    }
+
+    .animated-text h1 {
+        color: #000000;
+        font-size: 70px;
+        font-weight: 1000;
+        line-height: 70px;
+        text-align: center;
+    }
+
+    .animated-text h1:nth-child(1) {
+        animation: text-move 5s infinite;
+    }
+
+    @keyframes text-move {
+        0% {
+            margin-top: 0;
+        }
+
+        25% {
+            margin-top: -110px;
+        }
+
+        50% {
+            margin-top: -10px;
+        }
+
+        100% {
+            margin-top: 10px
+        }
+    }
+
+
+    .mySlides {
+        display: none;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    .slideshow-container {
+        max-width: 450px;
+        position: relative;
+        margin: auto;
+    }
+
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active {
+        background-color: #717171;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+    }
+
+
+
+
+    .columns {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        padding-top: 50px;
+        height: 400px;
+        margin-left: 0px;
+    }
+
+    .columns h1 {
+        font-size: 70px;
+        font-family: 'Bahnschrift Condensed';
+        color: rgb(73, 182, 255);
+        font-weight: 1000;
+        letter-spacing: 0.3em;
+        line-height: 1;
+        margin-bottom: 0.7rem;
+        text-align: left;
+    }
+
+    .new:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #column3 {
+        overflow: visible;
+        width: 30%;
+        margin-left: -100px;
+        margin-right: 100px;
+    }
+
+    #column4 {
+        width: 50%;
+        padding-left: 20px;
+        border-radius: 10px;
+        border-style: none;
+        padding-bottom: 20px;
+    }
+
+    #column4 #box3 {
+        width: auto;
+        height: auto;
+        font-family: 'Bahnschrift Condensed';
+        color: rgb(0, 0, 0);
+        font-size: 50px;
+        font-weight: 500;
+        position: absolute;
+        margin-top: 200px;
+        left: 40%;
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    #box3 a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #text2 {
+        position: relative;
+        font-size: 65px;
+        left: -100%;
+        animation: anim3 1s forwards 1s;
+        text-shadow: 5px 5px rgba(30, 143, 255, 0.178);
+    }
+
+    @keyframes anim3 {
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 0%;
+        }
+    }
+
+    #footer-info {
+        font-family: 'Bahnschrift Condensed';
+        text-align: left;
+        margin-top: 70px;
+        margin-right: 150px;
+        display: inline block;
+        float: right;
+    }
+
+    .new {
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+    .newnew {
+        margin-left: -100px;
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    #pain {
+        padding: 70px;
+        width: 100%;
+    }
+
+    /* #servicestitle{
+    margin-top: 250px;
+} */
+
+    #servicestitle h1 {
+        font-family: 'Bahnschrift Condensed';
+        font-size: 50px;
+        text-align: center;
+        margin-left: -70px;
+    }
+
+    .servicesinfo {
+        font-size: 35px;
+        font-family: 'Bahnschrift Condensed';
+        font-weight: bold;
+    }
+
+    .servicesinfo li {
+        display: inline-block;
+        align-items: center;
+        padding-left: 65px;
+        margin-top: 20px;
+    }
+
+
+
+
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(104, 102, 102, 0.2);
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+        background-color: rgb(255, 255, 255);
+        color: black;
+    }
+
+
+    .flip-card-back {
+        background-color: #000000;
+        color: rgb(190, 156, 0);
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-back h1 {
+        font-size: 20px;
+        text-align: center;
+        padding-left: 50px;
+    }
+
+    .flip-card-back p {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+    }
+
+    .columnz {
+        float: right;
+        width: 30%;
+        padding: 0 10px;
+        margin-top: 60px;
+    }
+
+    .rowz {
+        margin-left: -50px;
+    }
+
+    .rowz:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+        .columnz {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    .flip-card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+
+    .cardz {
+        margin-left: -100px;
+        padding-left: 20px;
+    }
+</style>
+
+<body>
+    <div id="first">
+        <div id="main">
+            <div id="box1"></div>
+
+            <div id="box2">
+                <a href="#spacing">
+                    <div id="text">
+                        CV<BR>GENERATOR
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="header" id="myHeader">
+            <div id="container">
+                <div id="logo"></div>
+                <img src="img/6.png" style="width: 100px;">
+            </div>
+            <div id="menu">
+                <ul>
+                    <a href="/views/landing.ejs" style="color: dodgerblue;">
+                        <li>HOME</li>
+                    </a>
+                    <a href="#spacing">
+                        <li>ABOUT</li>
+                    </a>
+                    <a href="#home">
+                        <li>SERVICES</li>
+                    </a>
+                    <a href="#myBtn">
+                        <li>CONTACT</li>
+                    </a>
+                    <a href="links.html">
+                        <li>RESOURCES</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+
+    <div id="spacing">
+        <br><br><br><br><br><br>
+        <div class="row">
+            <div class="column" id="column1">
+                <br><br><br>
+                <div class="animated-text">
+                    <h1>About</h1>
+                    <h1>Us</h1>
+                    <h1>CV Generation</h1>
+                </div>
+            </div>
+            <div class="column" id="column2">
+                <h1 style="font-size: 50px; letter-spacing: normal; text-decoration: underline;">Our Vision</h1>
+                <p style="font-family: 'Bahnschrift Condensed'; font-size: 17px;">Our organisation's goals are to
+                    improve South
+                    Africa's high unemployment rates.
+                    <br><br>
+                    Through our website users will be able to build their perfect resumes and send it off in search of
+                    their dream
+                    job.
+                    <br><br><br>
+                    We want to better South Africa's unemployment crisis as much as we possibly can!
+                    <br><br>
+                    We've provided links to many recruitment agencies all over SA and as well as many online
+                    instituitions.
+                    <br><br>
+                    By having these resources available, our users will be able to explore their options that leads to
+                    their dream
+                    job.
+                </p>
+            </div>
+        </div>
+        <div id="pain">
+
+        </div>
+        <div id="servicestitle">
+            <div class="newnew">
+                <h1 style="font-size: 60px;">OUR SERVICES</h1>
+
+
+                <div class="cardz">
+                    <div class="rowz">
+                        <div class="columnz">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="img/platinum.png" alt="Avatar" style="width:250px;height:250px;">
+                                    </div>
+                                    <div class="flip-card-back" style="background-color: silver; color: white;">
+                                        <a href="services.html" style="text-decoration: none; color:white;">
+                                            <h1>PLATINUM</h1>
+                                        </a>
+                                        <p style="font-size:25px; font-weight: bold; color: white;">Platinum Templates
+                                            <br>+ Consultations
+                                        </p>
+                                        <p style="font-size:25px; font-weight: bold; color:white;">R300</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columnz">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="img/premium.jpg" alt="Avatar" style="width:250px;height:250px;">
+                                    </div>
+                                    <div class="flip-card-back">
+                                        <a href="img/services.html"
+                                            style="text-decoration: none; color:rgb(187, 154, 8);">
+                                            <h1>PREMIUM</h1>
+                                        </a>
+                                        <p style="font-size:25px; font-weight: bold;">Premium Templates Available </p>
+                                        <p style="font-size:25px; font-weight: bold; color:rgb(187, 154, 8);">R99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="columnz">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front">
+                                        <img src="img/freemium.png" alt="Avatar" style="width: 270px;height:270px;">
+                                    </div>
+                                    <div class="flip-card-back" style="background-color: white; color: red;">
+                                        <a href="/views/cv-generator.ejs" style="text-decoration: none; color:RED;">
+                                            <h1>FREEMIUM</h1>
+                                        </a>
+                                        <p style="font-size:25px; font-weight: bold; color: black;">Basic Templates
+                                            Available</p>
+                                        <p style="font-size:25px; font-weight: bold; color:red;">Free Of Charge</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="new">
+            <div class="columns" id="column3">
+                <br><br><br><br><br><br><br>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 7</div>
+                        <img src="img/cv3.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 7</div>
+                        <img src="img/cv2.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 7</div>
+                        <img src="img/cv1.png" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 7</div>
+                        <img src="img/cv4.png" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 7</div>
+                        <img src="img/cv5.jpg" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">6 / 7</div>
+                        <img src="img/cv6.png" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 7</div>
+                        <img src="img/cv7.png" style="width:100%">
+                        <div class="text"></div>
+                    </div>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <br><br><br>
+                </div>
+                <br><br><br>
+                <script>
+                    var slideIndex = 0;
+                    showSlides();
+
+                    function showSlides() {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > slides.length) { slideIndex = 1 }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                        setTimeout(showSlides, 2500);
+                    }
+                </script>
+                <br><br>
+            </div>
+            <br><br>
+            <div class="columns" id="column4">
+                <div id="box3">
+                    <div id="text2">
+                        A Variety Of <BR> Resume Templates <BR>To Choose From!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <br><br><br><br><br><br>
+
+        <div class="footer">
+            <hr>
+            <button id="myBtn">Contact Us</button>
+
+            <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 style="font-family: 'Bahnschrift Condensed'; color: rgb(0, 0, 0); font-size: 35px;">Contact Us!
+                    </h1>
+                    <form action="https://formspree.io/f/xjvjwwrw" method="POST">
+                        <label>
+                            Full Name:<br>
+                            <input type="name" name="name">
+                        </label>
+                        <br><br>
+                        <label>
+                            Email Address:<br>
+                            <input type="email" name="email">
+                        </label>
+                        <br><br>
+                        <label>
+                            Contact Number:<br>
+                            <input type="number" name="number">
+                        </label>
+                        <br><br>
+                        <label>
+                            Message:<br>
+                            <textarea name="message"></textarea>
+                        </label><br>
+                        <button type="submit"
+                            style="font-style: 'Bahnschrift Condensed'; width: 100px; height: 50px; font-weight: bold; color: rgb(0, 0, 0); font-size: 20px;">Send</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <script>
+
+            var modal = document.getElementById("myModal");
+
+            var btn = document.getElementById("myBtn");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <div id="footer-info">
+            <h3>Located at 32 Lower Long Street, Cape Town, South Africa</h3>
+            <h3>Joshua Schell: +27 65 873 8753</h3>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <script src="index.js"></script>
+</footer>
+
+</html>

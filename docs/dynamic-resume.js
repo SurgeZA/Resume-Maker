@@ -58,7 +58,8 @@ const dynamicCV = (options, themeOptions) => {
     }
     
     .profile-image img {
-            box-shadow: 5px 5px red;
+        border-radius: 0%;
+        box-shadow: 5px 5px #0000005d;
     }
 
 
